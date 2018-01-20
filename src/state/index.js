@@ -1,3 +1,5 @@
 export default {
-  num: 0,
-};
+  quotes: [],
+  term: '',
+  index: 0
+}

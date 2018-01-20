@@ -1,63 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 body {
-  font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  height: 100%;
 }
 
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-section > *+* {
-  margin-left: 2rem;
-}
-
-button {
-  padding: 0 1rem;
-  border: none;
-  font-size: 2rem;
-  height: 3rem;
+.body {
+  display: inline-block;
+  margin: -10px 0px -20px -10px;
+  height: 101vh;
+  width: 101vw;
 }
 
 h1 {
-  font-size: calc(20px + 6vmin);
-  margin-top: 0;
-  margin-bottom: 1rem;
-  text-align: center;
+  font-weight: 100;
+  font-size: 60px;
 }
 
-p {
-  text-align: center;
-  margin-top: 0;
+h4 {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.count {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 4rem;
-  color: #333;
+input {
+  height: 45px;
+  font-size: 18px;
+  border-bottom: 1px solid grey;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  padding-left: 10px;
+  background-color: transparent;
 }
 
-[disabled] + .count {
-  color: #999;
+.hidden {
+  display: none;
 }
 
-.add {
-  background-color: mediumseagreen;
-  color: #fff;
+.direction {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 100px;
 }
 
-.sub {
-  background-color: mediumvioletred;
-  color: #fff;
+.direction:hover {
+  opacity: 0.2;
+  cursor: pointer;
 }
 
-.sub[disabled] {
-  opacity: .5;
+.centered-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  margin: auto;
+}
+
+.quote {
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  align-self: center;
+  justify-self: center;
+}
+
+.left {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.right {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
 }

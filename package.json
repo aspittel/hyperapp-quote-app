@@ -12,6 +12,7 @@
   "author": "Regis Boudinot (selfup)",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.17.1",
     "hyperapp": "^1.0.0"
   },
   "devDependencies": {
